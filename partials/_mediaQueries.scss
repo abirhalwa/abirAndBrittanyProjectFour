@@ -1,0 +1,60 @@
+@media (max-width: 850px) {
+  .wrapper {
+    width: 70%;
+  }
+  h1 {
+    font-size: calc(7vw + 2rem);
+    line-height: calc(7vw + 3rem);
+  }
+  h2 {
+    font-size: calc(2.3vw + 2rem);
+    line-height: calc(2.3vw + 3rem);
+  }
+  main {
+    .moodDiv .moodButtons {
+      flex-direction: column;
+      align-items: center;
+      li {
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 4vh;
+        }
+        img {
+          display: none;
+        }
+      }
+    }
+    form {
+      .formChild label {
+        margin-bottom: 1vh;
+      }
+      .checkboxContainer {
+        flex-direction: column;
+        div:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 2vh;
+        }
+      }
+    }
+    .resultDiv .buttonContainer {
+      flex-direction: column;
+      align-items: center;
+      button:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 2vh;
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  main form button {
+    width: 180px;
+  }
+  .wrapper {
+    width: 80%;
+  }
+  footer {
+    font-size: 1.3rem;
+  }
+}

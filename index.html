@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head starts here -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give me a drink!</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One|Open+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/drinkFavicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!--head ends here  -->
+<body>
+    <!-- header starts here -->
+    <header class="wrapper">
+        <h1>Give me a drink!</h1>
+    </header>
+    <!-- header ends here, main section starts here -->
+    <main class="wrapper">
+        <section>
+            <!-- main div that appears on page load -->
+            <div class="moodDiv" id="moodDiv">
+                <h2>How are you feeling today?</h2>
+                <!-- section with three mood options for user to choose from starts here -->
+                <ul class="moodButtons">
+                    <li class="mood" id="coffee">
+                        <img src="./assets/sleepy.png" alt="sleepy egg falling of toast">
+                        <button  class="mood">A little sleepy</button>
+                    </li>
+                    <li class="mood" id="smoothie">
+                        <img src="./assets/boost.png" alt="tired egg holding his head">
+                        <button >In need of a boost</button>
+                    </li>
+                    <li class="mood" id="wine">
+                        <img src="./assets/wine.png" alt="happy egg holding pink balloon">
+                        <button >Ready to party</button>
+                    </li>
+                </ul>
+            </div>
+            <!-- form that appears after user selects a mood -->
+            <form action="" class="hidden">
+                <!-- section for user to search for specific ingredient or specify maximum number of calories -->
+                <h2>Customize Your Options</h2>
+                <div class="formChild">
+                    <label for="oneIngredient">Include this ingredient: </label>
+                    <input type="text" name=""  pattern="[a-zA-Z\s]*" id="oneIngredient">
+                </div>
+                <div class="formChild">
+                    <label for="calories">Max Calories: </label>
+                    <input type="number" name="" id="calories" min="0" max="1000" step="1">
+                </div>
+                <!-- section for user to input dietary restrictions -->
+                <h2>Dietary Restrictions</h2>
+                <div class="checkboxContainer">
+                    <div>
+                        <input type="checkbox" name="" id="sugar">
+                        <label for="sugar">Sugar-Free</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="gluten">
+                        <label for="gluten">Gluten-Free</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="dairy">
+                        <label for="dairy">Dairy-Free</label>
+                    </div>
+                </div>
+                <!-- button that submits form and calls to the api based on inputs -->
+                <button type="submit">Submit</button>
+                <button class="restartSearchButton" type="button">Change up your search</button>
+            </form>
+            <!-- div for the preloader -->
+            <div class="preloader hidden"></div>
+            <!-- div that appears once drink results comes back from api -->
+            <div class="resultDiv hidden">
+                <h2 id="drinkTitle"></h2>
+                <div class="imageContainer">
+                    <img src="" alt="" id="drinkImage">
+                </div>
+                <h3>Ingredients</h3>
+                <ul class="ingredients">
+
+                </ul>
+                <h3>Instructions</h3>
+                <ol class="instructions">
+
+                </ol>
+                <a target="_blank" href="" id="drinkLink">Want more information? Click here!</a>
+                <!-- div with buttons for user to get another drink or start again from the beginning -->
+                <div class="buttonContainer">
+                    <button id="anotherDrinkButton">Give me another option</button>
+                    <button class="restartSearchButton">Change up your search</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- main content ends here, footer starts here -->
+    <footer>
+        <p>Copyright <span aria-hidden="true">©</span> 2020. Made by Abir Halwa and Brittany Giles </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

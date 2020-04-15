@@ -1,0 +1,11 @@
+// to style the footer
+footer {
+  background: $primaryColor;
+  color: #fff;
+  min-height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.6rem;
+}
